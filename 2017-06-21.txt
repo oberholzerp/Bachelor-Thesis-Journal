@@ -1,0 +1,31 @@
+submitted job to profile 2mm kernel
+	- small modifications in the host code to profile kernel execution time
+
+added "Using clEnqueueMigrateMemObjects to Transfer Data" to the Appendix
+
+added "Overlapping Data Transfers With Kernel Computation" to the Appendix
+
+added "Reducing Overhead of Kernel Enqueing" to the Appendix
+
+added "Using Multiple Compute Units" to the appendix
+
+added "Moving Data Efficiently between Device and Global Memory" to the appendix
+
+added "Inferring Burst Transfer from/to Memory" to the appendix
+
+added "Using Multiple DDR Banks" to the appendix
+
+added "Loop Unrolling" to the appendix
+
+added "Pipelining Loops" to the appendix
+
+added "Pipelining Workitems" to the appendix
+
+added "Enable Concurrent Processing with DATAFLOW" to the appendix
+
+added "Reducing Kernel to Kernel Communication Latency with On-Chip Global Memory" to the appendix
+
+added "Reducing Kernel to Kernel Communication Latency with OpenCL Pipes" to the appendix
+
+added "Improving Kernel Frequency" to the appendix
+
