@@ -1,0 +1,16 @@
+place and route 2mm_kernel with int attributes
+
+added short introduction to the "Optimizing FPGA Performance" in the appendix
+
+enabled profiling on 2mm kernel for FPGA
+	- started execution of 50 iterations with profiling enabled
+
+enabled profiling on 2mm kernel for GPU
+	- started execution of 100 iteration with profiling enabled
+
+added first optimization
+	- clEnqueuMigrateMemObjects
+
+added second optimization
+	- reducing overhead of kernel enqueing
+

@@ -1,0 +1,30 @@
+added how to unroll loops to the appendix
+
+added loop unrolling to the innermost loops of 2mm_kernel.cl
+place and route 2mm_kernel.cl
+	- slower than not optimized kernel
+	- started 50 executions of 2mm with loop unrolling factor 2
+
+added code to appendix that shows the conceptual view how the xcl_pipeline_loop attribute is automatically set
+
+added code to appendix that shows how to use the pipeline workitems attribute
+
+added code to appendix that shows how to enable DATAFLOW in OpenCL kernels
+
+added code to appendix that shows how to reduce kernel to kernel communication latency with on-chip memory
+
+started installation of SDAccel on greina
+	- installation finished
+	- need to install a license to use it
+		- license server added but the license is not recognized
+			- mailed to Tobias and Johannes
+
+added code to appendix that shows how to reduce kernel to kernel communication latency with OpenCL pipes
+
+first attempt to plot the improvements of clEnqueueMigrateMemObject
+	- not really satisfying
+
+added loop unrolling to the middle loop of kernel0 and the outer loop of kernel1
+place and route 2mm_kernel.cl
+	- started 50 executions of 2mm with profiling enabled
+
