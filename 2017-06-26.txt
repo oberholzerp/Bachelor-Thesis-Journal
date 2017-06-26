@@ -1,0 +1,29 @@
+added workgroup size to (1,1,1) (optimization unrolling innermost loop)
+place and route 2mm kernel
+	- error during execution (invalid work group size)
+		- local_work_size of host (during call of the kernel) and workgroup size of the kernel do not match
+
+added description of clGetPlatformIDs to the appendix
+
+added loop unrolling to the outer loops of 2mm
+place and route 2mm kernel
+
+added description of clEnqueueMigrateMemObjects to the appendix
+
+added description of clEnqueueWriteBuffer to the appendix
+
+added OpenCL profiling code explanation to the appendix
+
+added an explanation of pipelining to the appendix
+
+added workgroup size to (32,16,1) (optimization unrolling innermost loop)
+place and route 2mm kernel
+	- execution of 1 test sample
+		- takes longer than without loop unrolling
+	- started 10 executions of 2mm kernel with inner loop unrolling by factor 2
+
+added overview of the OpenCL platform model to the appendix
+
+changed loop enrolling from 2 to 4
+place and route 2mm_kernel.cl
+	- started 10 executions
