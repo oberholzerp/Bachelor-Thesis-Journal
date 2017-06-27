@@ -1,0 +1,32 @@
+changed loop unrolling from 4 to 8 in inner loop of 2mm_kernel.cl
+place and route 2mm_kernel.cl
+	- execute sample to ensure all tags are set correctly and there are no errors
+
+added overview of OpenCL memory model to the appendix
+
+place and route 2mm_kernel.cl with -O3 argument (loop unrolling by 8)
+	- started 1 execution to check if it works correct
+
+added illustration of SDAccel recommended flow - image out of sdaccel-optimization-guide
+
+plotted comparison of profiling data of gpu and fpga with non-optimized kernels
+
+place and route 2mm_kernel.cl with -03 argument, no loop unrolling
+	- too slow during execution
+
+place and route 2mm_kernel.cl without work group size specification in 2mm_kernel.cl
+	- no optimizations
+
+plotted comparison of profiling data of fpga no optimization and loop unrolling by 2
+
+plotted comparison of profiling data of fpga no optimization and loop unrolling by 4
+
+plotted comparison of profiling data of fpga no optimization and loop unrolling by 8
+
+able to connect to the license server sgv-license-01.ethz.ch with telnet on greina
+	- license is not recognized in vlm
+	- command to connect to greina:
+		ssh -R 2100:sgv-license-01.ethz.ch:2100 greina -X
+	- command to connect via telnet:
+		telnet localhost 2100
+
