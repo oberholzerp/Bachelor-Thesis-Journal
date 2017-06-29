@@ -1,0 +1,39 @@
+waiting for profiling on FPGA
+	- script not finished 06:25
+
+added PolyBench section to the appendix
+	- explanation of 2mm
+	- explanation of 3mm
+	- explanation of gemver
+
+started polly installation on greina
+	- done
+
+submitted batch job on Euler to place and route 2mm_kernel.cl
+	- not working
+		- has to be debugged
+			/cluster/shadow/.lsbatch/1498743049.45942654.shell: line 16: cd: /nfs/fs.hoefler.inf.ethz.ch/export/groups/hoefler/h1/home/tgrosser: No such file or directory
+			/cluster/shadow/.lsbatch/1498743049.45942654.shell: line 17: cd: /nfs/fs.hoefler.inf.ethz.ch/export/groups/hoefler/h1/home/tgrosser/xilinx: No such file or directory
+			/cluster/shadow/.lsbatch/1498743049.45942654.shell: line 18: cd: /nfs/fs.hoefler.inf.ethz.ch/export/groups/hoefler/h1/home/tgrosser/xilinx/SDx: No such file or directory
+			/cluster/shadow/.lsbatch/1498743049.45942654.shell: line 19: cd: /nfs/fs.hoefler.inf.ethz.ch/export/groups/hoefler/h1/home/tgrosser/xilinx/SDx/2017.1: No such file or directory
+			/cluster/shadow/.lsbatch/1498743049.45942654.shell: line 20: cd: /nfs/fs.hoefler.inf.ethz.ch/export/groups/hoefler/h1/home/tgrosser/xilinx/SDx/2017.1/bin: No such file or directory
+
+submitted batch job on Euler to place and route gesummv_kernel.cl
+	- not working correct
+		- has to be debugged
+			/cluster/shadow/.lsbatch/1498743049.45942654.shell: line 16: cd: /nfs/fs.hoefler.inf.ethz.ch/export/groups/hoefler/h1/home/tgrosser: No such file or directory
+			/cluster/shadow/.lsbatch/1498743049.45942654.shell: line 17: cd: /nfs/fs.hoefler.inf.ethz.ch/export/groups/hoefler/h1/home/tgrosser/xilinx: No such file or directory
+			/cluster/shadow/.lsbatch/1498743049.45942654.shell: line 18: cd: /nfs/fs.hoefler.inf.ethz.ch/export/groups/hoefler/h1/home/tgrosser/xilinx/SDx: No such file or directory
+			/cluster/shadow/.lsbatch/1498743049.45942654.shell: line 19: cd: /nfs/fs.hoefler.inf.ethz.ch/export/groups/hoefler/h1/home/tgrosser/xilinx/SDx/2017.1: No such file or directory
+			/cluster/shadow/.lsbatch/1498743049.45942654.shell: line 20: cd: /nfs/fs.hoefler.inf.ethz.ch/export/groups/hoefler/h1/home/tgrosser/xilinx/SDx/2017.1/bin: No such file or directory
+
+started place and route of gesummv_kernel.cl on Euler (directly - without batch scripts)
+	- error during FPGA synthesis
+		ERROR: [XOCC 60-704] Integration error, One or more synthesis runs failed during ocl dcp generation
+		ERROR: [XOCC 60-597] Kernel build failed to complete
+		ERROR: [XOCC 60-702] Failed to finish compilation and linking
+	- removing all PolyBench specific arguments
+		ERROR: [XOCC 60-704] Integration error, One or more synthesis runs failed during ocl dcp generation
+		ERROR: [XOCC 60-597] Kernel build failed to complete
+		ERROR: [XOCC 60-702] Failed to finish compilation and linking
+
