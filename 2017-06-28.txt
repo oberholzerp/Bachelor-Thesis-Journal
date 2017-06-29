@@ -1,0 +1,25 @@
+trying to add license to greina
+	- able to connect to the license server sgv-license-01.ethz.ch with telnet on greina
+		- license is not recognized in vlm
+		- command to connect to greina:
+			ssh -R 2100:sgv-license-01.ethz.ch:2100 greina -X
+		- command to connect via telnet:
+			telnet localhost 2100
+
+added profiling information to the kernels of 3mm_kernel.cl for GPU execution
+	- started batch script to profile 3mm on greina6
+
+added profiling code to the host of gemver for GPU execution
+	- started batch script to profile gemver on greina6
+
+added profiling commands to the host of 3mm for FPGA execution
+	- started single execution to check if all is set correct
+
+added profiling commands to the host of gemver for FPGA execution
+	- started single execution to check if all tags are set correct
+
+wrote script to profile 2mm, 3mm, gemver on FPGA
+	- started script
+		- start time 2017-06-28 16:15
+		- estimated duration ~9h
+
