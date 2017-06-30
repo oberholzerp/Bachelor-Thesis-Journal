@@ -1,0 +1,45 @@
+modified script place_route.sh for 2mm to see if I can fix the problem with the access to the xilinx installation
+	- added export of the xilinx installation to the script
+	- start place and route of kernel.cl with xocc
+	- submitted script with the command «bsub -o outputXOCC.txt < place_route.sh»
+	- wrote an e-mail to the cluster support
+
+added larger dataset to 2mm benchmark (extralarge * 10) to see if the data transfer time is getting larger
+	- started 2mm benchmark with modified extralarge dataset
+	- data transfer time is roughly the same as with normal extralarge dataset
+
+added larger dataset to 2mm benchmark (extralarge * 100) to see if the data transfer time is getting larger
+	- started 2mm benchmark with modified extralarge dataset
+	- error during memory allocation process
+		- not enough memory
+
+added larger dataset to 2mm benchmark (all four values set to 24000) to see if the data transfer time is getting larger
+	- started 2mm benchmark with modified extralarge dataset
+	- data transfer time is the same as with original extralarge dataset
+
+added larger dataset to 2mm benchmark (all four values set to 30000) to see if the data transfer time is getting larger
+	- started 2mm benchmark with modified extralarge dataset
+	- data transfer time is the same as with original extralarge dataset
+
+added larger dataset to 2mm benchmark (all four values set to 100000) to see if the data transfer time is getting larger
+	- started 2mm benchmark with modified extralarge dataset
+	- error:
+		- int overflow
+		- segfault
+
+added larger dataset to 2mm benchmark (all four values set to 50000) to see if the data transfer time is getting larger
+	- started 2mm benchmark with modified extralarge dataset
+	- error int overflow
+
+added larger dataset to 2mm benchmark (all four values set to 40000) to see if the data transfer time is getting larger
+	- started 2mm benchmark with modified extralarge dataset
+	- data transfer time is the same as with original extralarge dataset
+
+added Application Emulation introduction to the appendix
+	- added explanation CPU emulation
+	- added explanation of hardware emulation
+
+problem with fpga execution occured
+	- CL_DEVICE_NOT_FOUND
+	- wrote a mail to Johannes
+
