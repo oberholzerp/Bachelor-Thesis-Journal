@@ -1,0 +1,9 @@
+profile 2mm on FPGA
+
+copy sdaccel installation to /cluster/scratch/pascalo/xilinx
+
+submitted jobs to place and route on euler
+	- 2mm_kernel.cl
+	- 3mm_kernel.cl
+	- gemver_kernel.cl
+

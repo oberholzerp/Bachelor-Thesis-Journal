@@ -1,0 +1,44 @@
+submitted jobs to place and route on euler - with more processors
+	- 2mm_kernel.cl		JobID: 46114597
+		- submitted 06:00
+			- finished
+	- 3mm_kernel.cl		JobID: 46114571
+		- submitted 06:00
+			- finished
+	- gemver_kernel.cl	JobID: 46114778
+		- submitted 06:00
+			- not finished due to time limit
+		- submitted 08:30
+			- failed with Integration error
+		- submitted 13:00
+			- failed due to time limit
+		- submitted 17:10
+	- gesummv_kernel.cl	JobID: 46119995
+		- submitted 10:00
+			- finished
+
+added explanation of burst mode to the appendix
+
+added explanation of OpenCL execution model
+
+added explanation of synchronizing queues in host code to the appendix
+
+added explanation of synchronization functions to the appendix
+
+added explanation of explicit memory fence functions to the appendix
+
+added explanation of asyng copies from global to local memory, local to global memory, and prefetch to the appendix
+
+submitted jobs to place and route on euler with option -O3 (4 processing nodes, time limit 4 hours)
+	- 2mm_kernel.cl		JobID: 46130477
+		- submitted 16:48
+			- finished
+	- 3mm_kernel.cl		JobID: 46152207
+		- submitted 16:48
+			- not finished
+		- submitted 20:40
+	- gemver_kernel.cl	JobID: 46152142
+		- submitted 16:48
+
+started 10 executions of gemver on fpga
+
