@@ -1,0 +1,44 @@
+executing the xclbin file generated on euler does not work
+	- error message: Invalid Binary
+	  ERROR: Failed to parse ./xmltmp___
+		- maybe adding options solves the problem
+			- adding options did not solve the problem
+		- sourced some setup_sdaccel.sh similar to the one on the fpga1 machine
+
+place and route 2mm and 2mm -O3 on euler with options
+
+place and route 3mm and 3mm -O3 on euler with options
+
+place and route gemver and gemver -O3 on euler with options
+
+added illustration and explanation for overlapping data transfer with kernel computation to the appendix
+
+place and route gemver -O3 on fpga1 machine to look for differences
+	- xclbin from fpga1 machine starts with xclbin0 followed by some readable lines, whereas xclbin from euler starts with xclbin2 and has those human readable lines at the end
+	- timing:
+		Finished 1st of 5 tasks (FPGA synthesis). Elapsed time: 00h 19m 08s.
+		Finished 2nd of 5 tasks (FPGA logic optimization). Elapsed time: 00h 02m 45s.
+		Finished 3rd of 5 tasks (FPGA logic placement). Elapsed time: 00h 13m 46s.
+		Finished 4th of 5 tasks (FPGA routing). Elapsed time: 03h 11m 37s.
+		Finished 5th of 5 tasks (FPGA bitstream generation). Elapsed time: 00h 17m 31s.
+
+added illustration and explanation of multiple in-order command queues to the appendix
+
+added illustration and explanation for single out-of-order command queues to the appendix
+
+place and rout 2mm -O3 on fpga1 machine
+
+added image dataflow optimization to the appendix
+
+place and route gemver on euler
+	- no polybench flags set
+	- JobID: 46247708
+
+added short description of ppcg to the appendix
+
+iterated through ppcg section in the appendix
+
+place and route jacobi-2d on fpga1
+
+started execution of jacobi-2d on FPGA
+

@@ -37,8 +37,10 @@ submitted jobs to place and route on euler with option -O3 (4 processing nodes, 
 		- submitted 16:48
 			- not finished
 		- submitted 20:40
+			- llvm failure
 	- gemver_kernel.cl	JobID: 46152142
 		- submitted 16:48
+			- finished
 
 started 10 executions of gemver on fpga
 
