@@ -1,0 +1,32 @@
+jacobi-2d added code necessary to profile kernel0 and kernel1 of jacobi-2d_kernel.cl
+	- started execution of jacobi-2dProfiling on FPGA
+		- time_started: 08:20
+			- time_used without profiling: ~15000s ≃ 4.5h
+			- estimated finish: 13:30
+			- kernels are executed TSTEPS times
+			- first performance estimation
+					"jacobi-2d","waiting time","kernel0",0.029,"ms","FPGA","no optimization"
+					"jacobi-2d","data transfer time","kernel0",0.017,"ms","FPGA","no optimization"
+					"jacobi-2d","kernel execution time","kernel0",7527.378,"ms","FPGA","no optimization"
+					"jacobi-2d","waiting time","kernel1",0.020,"ms","FPGA","no optimization"
+					"jacobi-2d","data transfer time","kernel1",0.004,"ms","FPGA","no optimization"
+					"jacobi-2d","kernel execution time","kernel1",7527.408,"ms","FPGA","no optimization"
+
+iteration of xocc section in the appendix
+
+place and route of jacobi-2d on euler -O3
+	- JobID: 46323525
+
+place and route of jacobi-2d on euler
+	- JobID: 46321457
+
+installed ppcg on euler
+	- with help from alessandro
+
+submitted job to generate kernels and hosts for fixedsize-int on greina6
+	- started 11:00
+	- running for max 1 hour
+		- finished (host and kernel code is generated for all benchmarks)
+
+iteration of Vivado HLS section in the appendix
+

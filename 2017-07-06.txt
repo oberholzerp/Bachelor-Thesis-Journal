@@ -1,0 +1,16 @@
+debugging FPGA execution on fpga1 machine
+	- DSA has to be changed
+
+looking at spec benchmark, lbm
+	- how to compile to run lbm on CPU?
+	- writing an own main function just for debugging purpose
+		- lbm running on GPU
+			MAIN_stopClock:
+				usr:  172.19 sys:    0.05 tot:  172.24 wct:  172.11 MLUPS:  7.73
+			LBM_showGridStatistics:
+				nObstacleCells:   70688 nAccelCells:   18432 nFluidCells: 1210880
+				minRho:   0.9175 maxRho:   1.0862 mass: 1.300000e+06
+				minU: 8.593215e-07 maxU: 3.304111e-02
+	- generate host and kernel code with ppcg
+		lbm_host.c and lbm_kernel.cl
+
