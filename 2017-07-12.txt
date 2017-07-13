@@ -1,0 +1,9 @@
+place and route 2mm_kernel.cl on fpga2 machine (place and route from july 11 has been canceled when the ssh connection was interrupted)
+
+place and route 2mm_kernel.cl on euler to see if the errors occuring are the same
+ - JobID: 46848282
+ - JobID: 46853115
+ - JobID: 46853126
+ - JobID: 46853135
+ - JobID: 46853145
+

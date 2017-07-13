@@ -1,0 +1,2 @@
+debugging gpu execution of lbm benchmark
+

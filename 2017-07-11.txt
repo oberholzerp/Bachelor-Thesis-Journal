@@ -1,0 +1,41 @@
+debugging FPGA execution
+ - tried to rename the DSA
+	 - asked Johannes per mail
+	 - cmake and make is now working
+ - connecting to fpga2 machine
+	 - SDx set up correctly
+
+debugging ppcg running on lbm_own.c
+ - several warnings
+ - may look at test.c -> problem with memory
+
+submitted job on euler to place and route 2mm_kernel.cl
+ - place_route.sh
+	 - JobID: 46784552
+	 - wrong option --xdevice set
+ - place_route.sh
+	 - JobID: 46786177
+	 - JobID: 46818546
+ - place_route_O3.sh
+	 - JobID: 46786546
+
+submitted jobs on euler to place and route 3mm_kernel.cl
+ - place_route.sh
+	 - JobID: 46786791
+ - place_route_O3.sh
+	 - JobID: 46786730
+
+place and route 2mm_kernel.cl on fpga2 machine just for debugging purpose
+
+submitted jobs on euler to place and route gemver_kernel.cl
+ - place_route.sh
+	 - JobID: 46787431
+ - place_route_O3.sh
+	 - JobID: 46787471
+
+submitted jobs on euler to place and route jacobi-2d_kernel.cl
+ - place_route.sh
+	 - JobID: 46787631
+ - place_route_O3.sh
+	 - JobID: 46787542
+

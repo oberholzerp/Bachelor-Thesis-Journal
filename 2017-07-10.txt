@@ -1,0 +1,11 @@
+looking at clang-wrapper option delivered with Xilinx SDx installation to see how to generate a .xpirll file
+ - -emit-llvm: use the LLVM representation for assembler and object files
+ - -mllvm <value>: additional arguments to forward to LLVM's option processing
+ - copied the help information in a separate file clang-wrapper_hel_page.txt
+
+submitted job to see if there is a .xpirll file generated
+ - JobId: 46697764
+
+wrote test.c file to see how to solve problems with ppcg
+ - mail to Tobias
+

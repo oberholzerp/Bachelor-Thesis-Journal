@@ -1,0 +1,30 @@
+iterated CMake section in the appendix
+
+debugging FPGA execution
+  - updated .bashrc such that the bin folders of the SDx 2017.1 installation are exported
+
+wrote script to run lbm on greina
+  - CPU and GPU execution
+  - CPU execution
+	usr:  156.18 sys:    0.01 tot:  156.19 wct:  156.34 MLUPS:  8.51
+  - GPU execution
+	not working ppcg terminates with warnings such that there is no kernel code created
+
+iterated Optimizing FPGA execution section in the appendix
+
+changed the style figures are included
+  - caption, label at the bottom
+  - center block around the includegraphics command
+
+added some new subsections to the Benchmark section in the appendix
+  - SPEC Benchmark Suite
+  - jacobi-2d description to PolyBench section
+
+iterated Pipelining section in the appendix
+
+added short description of lattice boltzmann method
+
+added notes of running lbm on 
+  - a GPU
+  - a FPGA
+
