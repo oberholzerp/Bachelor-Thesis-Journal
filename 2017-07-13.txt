@@ -1,0 +1,5 @@
+debugging xocc on euler
+
+place and route jacobi-2d_kernel.cl
+ - execution is working
+
