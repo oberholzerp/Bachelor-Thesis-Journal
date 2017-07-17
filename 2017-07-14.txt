@@ -1,0 +1,23 @@
+iteration of background section
+ - OpenCL
+ - SDAccel
+ - FPGA
+ - Vivado HLS
+ - Polly-ACC
+ - SDAccel
+ - xocc
+ - Spir-V
+ - Just In Time Compilation
+
+submitted jobs on euler to debug kernel compilation
+ - JobID: 47000944
+ - JobID: 47001118
+ - JobID: 47001147
+ - JobID: 47001186
+ - JobID: 47001194
+ - JobID: 47001198
+ - JobID: 47001203
+ - JobID: 47001212
+ - JobID: 47001216
+ - JobID: 47001219
+
