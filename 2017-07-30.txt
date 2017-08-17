@@ -1,0 +1,9 @@
+build deriche kernel
+ - successful
+
+build doitgen kernel
+ - successful
+
+build durbin kernel
+ - successful
+

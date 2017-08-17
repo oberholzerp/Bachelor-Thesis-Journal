@@ -1,0 +1,15 @@
+reqd_work_size(2,2,1) does not lead to the correct result
+
+no work_group_size_set
+ - result is still 200 instead of 100
+
+build slightly modified kernel
+ - no get_local_id
+ - count[0] is increased by 1
+ - still wrong result
+
+reqd_work_size(2,1,1) does not lead to the correct result
+
+build modified kernel (input and output stored in different variables)
+ - result correct
+

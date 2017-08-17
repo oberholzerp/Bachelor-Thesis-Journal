@@ -1,0 +1,14 @@
+place and route empty kernel with slightly different options to see if there is still an error if the DSA number is different
+ - Target device: xilinx:adm-pcie-7v3:1ddr:3.0
+	 - no difference
+
+optimization jacobi kernel
+ - loop unrolling by 32
+	 - place and route the new kernel code
+		 - finished with errors (It appears that a Xilinx application ran out of memory while generating '/home/pascalo/bachelor-thesis-fpga-code/fpga-exec-time_fixedsize_int/jacobi-2dProfiling/build_loopUnrolling32/_xocc_kernel_kernel.dir/impl/build/system/kernel/bitstream/kernel_ipi/ipiprj/ipiprj.runs/dr_kernel1_1_0_synth_1/runme.log') -> second try
+		 - cancelled because it takes too long
+
+debugging xocc on euler
+ - building into scratch space (tipp from Johannes)
+	 - because Euler has very limited file system for users
+

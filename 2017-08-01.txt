@@ -1,0 +1,45 @@
+build test-execution from xpirbc
+ - successful
+run test-execution
+ - time ./time.exe (execution on FPGA)
+	200
+	real	0m13.995s
+	user	0m1.080s
+	sys	0m1.996s
+ - time ./a.out (execution on greina6
+	100
+	real	1m36.400s
+	user	1m6.146s
+	sys	0m30.184s
+
+started script to build all the missing kernels from polybench
+ - gesummv
+	 - finished
+ - gramschmidt
+	 - error with function sqrt
+ - heat-3d
+	 - finished
+ - jacobi-1d
+	 - running
+ - jacobi-2d
+	 - waiting
+ - lu
+	 - waiting
+ - ludcmp
+	 - waiting
+ - mvt
+	 - waiting
+ - nussinov
+	 - waiting
+ - seidel-2d
+	 - waiting
+ - symm
+	 - waiting
+ - syr2k
+	 - waiting
+ - syrk
+	 - waiting
+ - trmm
+	 - waiting
+ - trisolv
+	 - waiting

@@ -1,0 +1,11 @@
+debugging kernel build on Euler
+ - adding -k argument to the xocc command
+
+extended xocc options table$
+ - -k argument
+ - --xp argument
+
+added documentation to the appendix
+ - xocc
+	 - three options how to get a kernel.xclbin out of a kernel.cl
+

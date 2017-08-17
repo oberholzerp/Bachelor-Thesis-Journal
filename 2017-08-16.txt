@@ -1,0 +1,33 @@
+build kernel with get_local_id and __attribute__((reqd_work_group_size(2,1,1)))
+ - result is wrong (getting 200 instead of 100)
+
+added description of software and hardware emulation to the appendix
+
+debuging software emulation
+ - *** stack smashing detected ***: ./time.exe terminated
+	Aborted (core dumped)
+
+debuging hardware emulation
+ - working -- taking very long
+ - prints result at the end
+ - hardware emulation gives correct result back if get_local_id is used
+ - hardware emulation gives correct result back if get_global_id is used
+
+hardware emulation of simple addition kernel
+ - changing global work size from 2 to 4 (in host code) does not change the result (result is 100 (correct))
+ - changing global work size from 2 to 40 (in host code) does not change the result (result is 100 (correct))
+ - bigger global_work_size -> longer execution time
+ - bigger global_work_size -> more memory used
+
+hardware emulation of 2mm
+ - some errors
+	ERROR: Invalid scalar argument size, expected 4 got 8
+	ERROR: clSetKernelArg() for kernel "kernel0", argument index 2.
+
+	ERROR: Invalid scalar argument size, expected 4 got 8
+	ERROR: clSetKernelArg() for kernel "kernel0", argument index 2.
+
+	OpenCL error: CL_INVALID_ARG_SIZE
+	ERROR: Invalid scalar argument size, expected 4 got 8
+	ERROR: clSetKernelArg() for kernel "kernel0", argument index 2.
+

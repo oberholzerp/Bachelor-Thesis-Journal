@@ -1,0 +1,7 @@
+added description of clEnqueueNDRangeKernel to the appendix
+
+added description of clGetDeviceInfo to the appendix
+
+debuging software emulation
+ - program runs with seg fault
+

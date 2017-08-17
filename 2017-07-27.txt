@@ -1,0 +1,7 @@
+build 2mm_kernel.cl
+ - only working if SDX_USE_CLANG_39 and HLS_USE_CLAN_39 are not set
+ - finished
+
+build 3mm_kernel.cl
+ - failed
+

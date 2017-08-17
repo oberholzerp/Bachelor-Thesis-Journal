@@ -1,0 +1,23 @@
+test if kernel creation out of xpirbc is delivering correct results
+ - wrote a small kernel that adds 1 to count 100 times
+ - generate a xpirbc out of the kernel
+ - generate a xclbin out of the xpirbc
+	 - failed
+		 - Failed to build kernel(ip) kernel0
+ - generate a xclbin out of cl
+	 - successful
+
+generating host and kernel code out of polybench benchmarks
+ - options:
+	 - extralarge dataset
+	 - datatype int
+	 - scalar loop bounds
+	 - c99 proto
+
+build vector_add (xpirbc file from alex)
+ - successful
+	 - out of OpenCL kernel file
+		 - create xpirbc -> create xclbin
+	 - out of xpirbc
+		 - create xclbin out of xpirbc from alex
+

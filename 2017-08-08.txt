@@ -1,0 +1,18 @@
+build with get_global_id instead of get_local_id and no work_group_size set
+ - still wrong result (200 instead of 100)
+
+build with get_global_id instead of get_local_id and work_group_size 2,2,1
+ - still wrong result (200 instead of 100)
+
+build with get_global_id instead of get_local_id and work_group_size 2,1,1
+ - correct result
+ - block_size has to match work_group_size
+
+changing the work_group_size and block_size to 20 leads to the correct result
+
+build with get_local_id and work_group_size 2,1,1
+ - wrong result (200 instead of 100)
+
+build with get_global_id instead of get_local_id and work_group_size 1,1,1
+ - correct result - host has to be modified such that local_work_group_size/block_size is 1,1,1
+

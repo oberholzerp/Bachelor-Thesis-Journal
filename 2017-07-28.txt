@@ -1,0 +1,18 @@
+build adi kernel
+ - successful
+
+build atax kernel
+ - successful
+
+build bicg kernel
+ - successful
+
+build cholesky kernel
+ - failed: error: call to 'sqrt' is ambiguous
+
+build correlation kernel
+ - failed: error: call to 'sqrt' is ambiguous
+
+build covariance kernel
+ - successful
+

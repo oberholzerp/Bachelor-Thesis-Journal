@@ -1,0 +1,11 @@
+debugging xocc on euler
+ - maybe: too less memory on login nodes -> execute via batch script
+	 - JobID: 47563957
+		 - failed: make kernel is referencing to the /nfs/... storage
+	 - JobID: 47564211
+		 - failed: flags to use clang 3.9 not set
+	 - JobID: 47565420
+		 - failed
+	 - JobID: 47565623
+		 - failed
+

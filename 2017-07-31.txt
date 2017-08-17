@@ -1,0 +1,12 @@
+build fdtd-2d kernel
+ - successful
+
+build floyd-warshall kernel
+ - successful
+
+build gemm kernel
+ - successful
+
+build gemver kernel
+ - successful
+

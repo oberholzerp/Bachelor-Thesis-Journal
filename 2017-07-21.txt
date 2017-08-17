@@ -1,0 +1,9 @@
+looking for workaround of xocc errors
+ - compile kernel.cl to kernel.xpirbc.linked.xpirbc
+	 - no errors
+ - xocc with kernel.xpirbc.linked.xpirbc as input file
+	 - still errors
+		ERROR: [XOCC 60-704] Integration error, One or more synthesis runs failed during ocl dcp generation
+		ERROR: [XOCC 60-597] Kernel build failed to complete
+		ERROR: [XOCC 60-702] Failed to finish compilation and linking
+
