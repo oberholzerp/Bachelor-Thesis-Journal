@@ -1,0 +1,32 @@
+test-2000:
+ - kernel with get_local_id and without reqd_work_group_size yields to correct result
+ - kernel with get_local_id and with reqd_work_group_size(32,1,1) yields to correct result
+ - kernel with get_global_id and without reqd_work_group_size yields to correct result
+ - kernel with get_global_id and with reqd_work_group_size(32,1,1) yields to correct result
+
+building kernel 2000 with get_local_id and with __attribute__((reqd_work_group_size(32,1,1)))
+ - finished
+
+building kernel 2000 with get_local_id and without __attribute__((reqd_work_group_size(32,1,1)))
+ - finished
+
+building kernel 2000 with get_global_id and with __attribute__((reqd_work_group_size(32,1,1)))
+ - finished
+
+building kernel 2000 with get_global_id and without __attribute__((reqd_work_group_size(32,1,1)))
+ - finished
+
+debuging sw_emu
+
+building kernel 2 with get_local_id and with __attribute__((reqd_work_group_size(32,1,1)))
+ - wrong size of the work group - should be 2,1,1
+
+building kernel 2 with get_local_id and without __attribute__((reqd_work_group_size(32,1,1)))
+ - result correct
+
+building kernel 2 with get_global_id and with __attribute__((reqd_work_group_size(32,1,1)))
+ - wrong size of the work group - should be 2,1,1
+
+building kernel 2 with get_global_id and without __attribute__((reqd_work_group_size(32,1,1)))
+ - result correct
+

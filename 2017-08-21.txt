@@ -1,0 +1,103 @@
+kernel with size 2 (get_local_id, no work_group_size set)
+ - result 100, correct
+
+kernel with size 2 (get_local_id, work_group_size(2,1,1))
+ - result 200, false
+
+kernel with size 2 (get_global_id, no work_group_size set)
+ - result 200, false
+
+kernel with size 2 (get_global_id, work_group_size(2,1,1))
+ - result 100, correct
+
+kernel with size 2000 (get_local_id, no work_group_size set)
+ - result 100, correct
+
+kernel with size 2000 (get_local_id, work_group_size(32,1,1))
+ - result 100, correct
+
+kernel with size 2000 (get_global_id, no work_group_size set)
+ - result 100, correct
+
+kernel with size 2000 (get_global_id, work_group_size(32,1,1))
+ - result 100, correct
+
+kernel with size 2000 (work_group_size(1,1,1) specified in ppcg, reqd_work_group_size(1,1,1) not specified as attribute in kernel)
+ - result 100, correct
+
+kernel with size 2000 (work_group_size(1,1,1) specified in ppcg, reqd_work_group_size(1,1,1) specified as attribute in kernel)
+ - result 200, false
+
+created kernel with size 2000 with work group size 1
+ - command:
+	$ ppcg --target=opencl test2000.c --sizes="{kernel[i]->tile[1,1,1];kernel[i]->block[1,1,1];kernel[i]->grid[1,1,1]}"
+ - launched script to build kernels with work_group_size(1,1,1)
+	 - build kernel without work_group_size specified
+		 - finished
+		 - execution on FPGA is correct
+	 - build kernel with work_group_size specified
+		 - finished
+		 - execution on FPGA is not correct
+	 - build kernel for hardware emulation without work_group_size specified
+		 - finished
+		 - hardware emulation
+			 - result seems to be correct - 1 added after each kernel iteration
+			INFO: [SDx-EM 22] [Wall clock time: 15:59, Emulation time: 0.0135177 ms] Data transfer between kernel(s) and global memory(s)
+			BANK0          RD = 7.812 KB               WR = 7.812 KB        
+			BANK1          RD = 0.000 KB               WR = 0.000 KB        
+			BANK2          RD = 0.000 KB               WR = 0.000 KB        
+			BANK3          RD = 0.000 KB               WR = 0.000 KB        
+	 - build kernel for hardware emulation with work_group_size specified
+		 - finished
+		 - hardware emulation
+			 - result seems to be correct - 1 added after each kernel iteration
+			INFO: [SDx-EM 22] [Wall clock time: 16:01, Emulation time: 0.0135177 ms] Data transfer between kernel(s) and global memory(s)
+			BANK0          RD = 7.812 KB               WR = 7.812 KB        
+			BANK1          RD = 0.000 KB               WR = 0.000 KB        
+			BANK2          RD = 0.000 KB               WR = 0.000 KB        
+			BANK3          RD = 0.000 KB               WR = 0.000 KB        
+
+kernel with size 2000 hw_emu
+ - created json file to enable hw_emulation
+ - exported necessary variables
+	 - export XILINX_SDX=/opt/Xilinx/SDx/2017.1
+	 - export XCL_EMULATION_MODE=true
+ - launched script to build kernels with work_group_size(1,1,1) for hardware emulation
+	 - build kernel get_local_id without attribute
+		 - finished
+		 - hardware emulation
+			 - result is false - added 63 in each kernel execution
+			INFO: [SDx-EM 22] [Wall clock time: 13:51, Emulation time: 2.26326 ms] Data transfer between kernel(s) and global memory(s)
+			BANK0          RD = 7.812 KB               WR = 7.812 KB        
+			BANK1          RD = 0.000 KB               WR = 0.000 KB        
+			BANK2          RD = 0.000 KB               WR = 0.000 KB        
+			BANK3          RD = 0.000 KB               WR = 0.000 KB
+	 - build kernel get_local_id with attribute reqd_work_group_size(32,1,1)
+		 - finished
+		 - hardware emulation
+			 - running - just one kernel execution
+			 - result is false - added 63 in each kernel execution
+			INFO: [SDx-EM 22] [Wall clock time: 15:48, Emulation time: 2.12168 ms] Data transfer between kernel(s) and global memory(s)
+			BANK0          RD = 7.812 KB               WR = 7.812 KB        
+			BANK1          RD = 0.000 KB               WR = 0.000 KB        
+			BANK2          RD = 0.000 KB               WR = 0.000 KB        
+			BANK3          RD = 0.000 KB               WR = 0.000 KB        
+	 - build kernel get_global_id without attribute
+		 - finished
+		 - hardware emulation
+			 - result seems to be correct - added 1 in the first kernel execution
+			INFO: [SDx-EM 22] [Wall clock time: 15:50, Emulation time: 2.40446 ms] Data transfer between kernel(s) and global memory(s)
+			BANK0          RD = 7.812 KB               WR = 7.812 KB        
+			BANK1          RD = 0.000 KB               WR = 0.000 KB        
+			BANK2          RD = 0.000 KB               WR = 0.000 KB        
+			BANK3          RD = 0.000 KB               WR = 0.000 KB        
+	 - build kernel get_global_id with attribute reqd_work_group_size(32,1,1)
+		 - finished
+		 - hardware emulation
+			 - result seems to be correct - added 1 in the first kernel execution
+			INFO: [SDx-EM 22] [Wall clock time: 15:53, Emulation time: 2.26326 ms] Data transfer between kernel(s) and global memory(s)
+			BANK0          RD = 7.812 KB               WR = 7.812 KB        
+			BANK1          RD = 0.000 KB               WR = 0.000 KB        
+			BANK2          RD = 0.000 KB               WR = 0.000 KB        
+			BANK3          RD = 0.000 KB               WR = 0.000 KB        
+

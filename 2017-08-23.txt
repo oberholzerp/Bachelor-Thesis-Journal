@@ -1,0 +1,75 @@
+created Google spreadsheet to show a correctness matrix for normal builds and SPIR builds
+
+build kernel size=2, get_global_id, attribute reqd_work_group_size not specified
+ - finished
+ - result after FPGA execution: 200 (false)
+
+generated host and kernel code for addition kernel with size 3
+	 - get_local_id, no reqd_work_group_size
+	 - get_local_id, reqd_work_group_size(3,1,1)
+	 - get_global_id, no reqd_work_group_size
+	 - get_global_id, reqd_work_group_size(3,1,1)
+
+generated host and kernel code for addition kernel with size 31
+	 - get_local_id, no reqd_work_group_size
+	 - get_local_id, reqd_work_group_size(31,1,1)
+	 - get_global_id, no reqd_work_group_size
+	 - get_global_id, reqd_work_group_size(31,1,1)
+
+generated host and kernel code for addition kernel with size 32
+	 - get_local_id, no reqd_work_group_size
+	 - get_local_id, reqd_work_group_size(32,1,1)
+	 - get_global_id, no reqd_work_group_size
+	 - get_global_id, reqd_work_group_size(32,1,1)
+
+generated host and kernel code for addition kernel with size 2048
+	 - get_local_id, no reqd_work_group_size
+	 - get_local_id, reqd_work_group_size(32,1,1)
+	 - get_global_id, no reqd_work_group_size
+	 - get_global_id, reqd_work_group_size(32,1,1)
+
+build kernels for addition kernel with size 3
+ - get_local_id, no reqd_work_group_size
+	 - finished
+	 - execution on FPGA result is 100 - correct
+ - get_local_id, reqd_work_group_size
+	 - finished
+	 - execution on FPGA result is 200 - false
+ - get_global_id, no reqd_work_group_size
+	 - finished
+	 - execution on FPGA result is 200 - false
+ - get_global_id, reqd_work_group_size
+	 - finished
+	 - execution on FPGA result is 100 - correct
+
+build kernels for addition kernel with size 31
+ - get_local_id, no reqd_work_group_size
+	 - finished
+	 - execution on FPGA result is 100 - correct
+ - get_local_id, reqd_work_group_size
+	 - finished
+ - get_global_id, no reqd_work_group_size
+	 - finished
+ - get_global_id, reqd_work_group_size
+	 - finished
+
+build kernels for addition kernel with size 32
+ - get_local_id, no reqd_work_group_size
+	 - running
+ - get_local_id, reqd_work_group_size
+	 - running
+ - get_global_id, no reqd_work_group_size
+	 - running
+ - get_global_id, reqd_work_group_size
+	 - running
+
+build kernels for addition kernel with size 2048
+ - get_local_id, no reqd_work_group_size
+	 - waiting
+ - get_local_id, reqd_work_group_size
+	 - waiting
+ - get_global_id, no reqd_work_group_size
+	 - waiting
+ - get_global_id, reqd_work_group_size
+	 - waiting
+

@@ -1,0 +1,14 @@
+debug execution of 2mm on FPGA with extralarge dataset and datatype int
+ - replacing all double identifier by int to get rid of the segfault
+ - execution 2mm on FPGA
+	 - started: 08:52
+	 - finished: ??:??
+	 - canceled execution, because it took more than 1h
+
+block-ram stores and loads have to be placed before every kernel enqueue
+ - leaving the memory allocated during two calls of a kernel is not working in hardware emulation
+ - TODO check if this behavior occurs during execution on FPGA
+
+build 2mm kernel without reqd_work_group_size(32,16,1) specified for hardware emulation
+ - running hw_emu on fpga1 machine (started 11:50)
+

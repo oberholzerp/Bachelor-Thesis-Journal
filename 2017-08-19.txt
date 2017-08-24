@@ -1,0 +1,12 @@
+building kernel 2 with get_local_id and with __attribute__((reqd_work_group_size(2,1,1)))
+ - finished
+
+building kernel 2 with get_local_id and without __attribute__((reqd_work_group_size(2,1,1)))
+ - finished
+
+building kernel 2 with get_global_id and with __attribute__((reqd_work_group_size(2,1,1)))
+ - finished
+
+building kernel 2 with get_global_id and without __attribute__((reqd_work_group_size(2,1,1)))
+ - finished
+
